@@ -1,9 +1,5 @@
 import telebot
-import time
-import requests
 import os
-from telebot import types
-from random import randrange
 from dotenv import load_dotenv
 from g4f.client import Client
 
@@ -30,7 +26,6 @@ def handler_other_messages(message):
         bot.send_message(message.chat.id, response.choices[0].message.content)
     except Exception as ex:
         bot.send_message(message.chat.id,f"Ошибка: что то пошло не так!")
-
 
 
 bot.infinity_polling()
